@@ -1,0 +1,146 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: #f7f9fc;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background: #00b4d8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background: white;
+  color: #00b4d8;
+}
+
+/* MAIN */
+.principal-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 30px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.principal {
+  width: 60%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mascota {
+  width: 200px;
+  animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* FOOTER */
+footer {
+  background: #ade8f4;
+  padding: 20px;
+  text-align: center;
+}
+
+footer strong {
+  color: #0077b6;
+}
+
+
+
+.footer-redes a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  /* menos espacio entre icono y texto */
+  text-decoration: none;
+  color: #fff;
+  padding: .5px 1px;
+  /* reducimos el tamaño del botón */
+  border-radius: 20px;
+  /* ajustamos para que siga viéndose redondeado */
+  margin: 5px;
+  font-size: 14px;
+  /* tamaño de texto más pequeño */
+  transition: all 0.3s ease;
+}
+
+
+.btn-whatsapp {
+  background: #25D366;
+}
+
+.btn-facebook {
+  background: #1877f2;
+}
+
+.btn-whatsapp:hover,
+.btn-facebook:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* RESPONSIVO */
+@media(max-width: 768px) {
+  nav a {
+    margin: 5px 0;
+  }
+
+  .principal-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .principal {
+    width: 90%;
+  }
+
+  .mascota {
+    width: 150px;
+  }
+}
